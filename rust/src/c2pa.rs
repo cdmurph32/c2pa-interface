@@ -297,6 +297,7 @@ impl C2PaSender<wasmbus_rpc::actor::prelude::WasmHost> {
 #[async_trait]
 impl<T: Transport + std::marker::Sync + std::marker::Send> C2Pa for C2PaSender<T> {
     #[allow(unused)]
+    /// Calculates the factorial (n!) of the input parameter
     async fn embed_transcode_claim(
         &self,
         ctx: &Context,
